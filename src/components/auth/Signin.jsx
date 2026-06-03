@@ -17,7 +17,7 @@ const Signin = () => {
       const res = await fetch("/api/auth/signin", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email, password, role }),
       });
 
       const data = await res.json();
@@ -55,6 +55,41 @@ const Signin = () => {
             <p className="text-slate-400 font-medium">Enter your credentials to continue</p>
           </div>
           <form onSubmit={handleLogin} className="space-y-6">
+            {/* Role Selection Label */}
+            <div className="text-center">
+              <span className="text-[10px] font-black tracking-[0.3em] text-slate-500 uppercase">Select Your Role</span>
+            </div>
+
+            {/* Role Selection Segmented Control */}
+            <div className="bg-slate-800/50 p-1.5 rounded-2xl flex items-center border border-white/5 shadow-inner">
+              <button
+                type="button"
+                onClick={() => {
+                  setRole("user");
+                  setEmail("user@tourist.com");
+                  setPassword("user123");
+                }}
+                className={`flex-1 py-3 rounded-xl text-sm font-black transition-all duration-300 outline-none ${
+                  role === "user" ? "bg-blue-600 text-white shadow-lg shadow-blue-600/20" : "text-slate-500 hover:text-slate-300"
+                }`}
+              >
+                USER
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setRole("admin");
+                  setEmail("admin@tourist.com");
+                  setPassword("admin123");
+                }}
+                className={`flex-1 py-3 rounded-xl text-sm font-black transition-all duration-300 outline-none ${
+                  role === "admin" ? "bg-blue-600 text-white shadow-lg shadow-blue-600/20" : "text-slate-500 hover:text-slate-300"
+                }`}
+              >
+                ADMIN
+              </button>
+            </div>
+
             <div className="space-y-4">
               <div className="relative group">
                 <input
@@ -76,6 +111,11 @@ const Signin = () => {
                   className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white text-sm outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all placeholder:text-slate-500 group-hover:border-white/20"
                   required
                 />
+              </div>
+              <div className="flex justify-end mt-2">
+                <Link href="/reset-password" className="text-blue-400 text-xs font-bold hover:text-blue-300 transition-colors">
+                  Forgot Password?
+                </Link>
               </div>
             </div>
 
@@ -102,8 +142,26 @@ const Signin = () => {
 
           {/* Hint Overlay (Temporary for UX assistance) */}
           <div className="mt-8 pt-8 border-t border-white/5 text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em] text-center leading-relaxed">
-            <p>Demo Admin: admin@tourist.com (admin123)</p>
-            <p>Demo User: user@tourist.com (user123)</p>
+            <p 
+              className="cursor-pointer hover:text-slate-300 transition-colors mb-2"
+              onClick={() => {
+                setRole("admin");
+                setEmail("admin@tourist.com");
+                setPassword("admin123");
+              }}
+            >
+              Demo Admin: admin@tourist.com (admin123)
+            </p>
+            <p 
+              className="cursor-pointer hover:text-slate-300 transition-colors"
+              onClick={() => {
+                setRole("user");
+                setEmail("user@tourist.com");
+                setPassword("user123");
+              }}
+            >
+              Demo User: user@tourist.com (user123)
+            </p>
           </div>
         </div>
       </div>
