@@ -52,21 +52,11 @@ export const pailinDestinations = [
   {
     id: "o-tavao",
     name: "O'Tavao Waterfall",
-    images: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/O_Tavao_waterfall_Pailin.jpg/1280px-O_Tavao_waterfall_Pailin.jpg",
+    images: "https://www.asiakingtravel.com/cuploads/files/Pailin-7.jpg",
     description: "Also known as KPI waterfall, a popular swimming spot for locals.",
     rating: 4.3,
     fullDescription: "Known locally as the KPI waterfall, O'Tavao is a favorite weekend getaway for Pailin residents. The small, wide waterfall flows over several broad rock layers, creating perfectly shallow, safe pools that are ideal for families. The area is dotted with small local huts where you can rent mats and enjoy a fresh traditional lunch by the cool water.",
     highlights: ["Safe family swimming", "Local picnic culture", "Easily accessible nature"],
     duration: "2 hours"
-  },
-  {
-    id: "pailin-ruby-mines",
-    name: "Pailin Ruby Mines",
-    images: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Gem_mining_Pailin.jpg/1280px-Gem_mining_Pailin.jpg",
-    description: "Learn about Pailin's history as Cambodia's premier gem-mining hub.",
-    rating: 4.2,
-    fullDescription: "Pailin was once the epicenter of the sapphire and ruby trade in Southeast Asia. While the massive commercial mines of the past are now mostly gone, small-scale artisanal mining is still practiced by local enthusiasts and fortune hunters. Visiting the old gem-mining areas provides a deep insight into the history and identity of Pailin as 'the City of Gems.'",
-    highlights: ["Gem-mining heritage", "History of 'City of Gems'", "Artisanal mining insights"],
-    duration: "1 hour"
   }
 ];

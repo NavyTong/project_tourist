@@ -52,7 +52,7 @@ export const kepDestinations = [
   {
     id: "kep-national-park",
     name: "Kep National Park",
-    images: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Kep_National_Park.jpg/1280px-Kep_National_Park.jpg",
+    images: "https://www.greeneratravel.com/userfiles/850keppark.jpg",
     description: "Hike the scenic trails for panoramic views of the ocean and islands.",
     rating: 4.3,
     fullDescription: "Kep National Park features an 8km circular trail that winds through lush evergreen forest. The trail is well-marked and offers several viewpoints, including 'Sunset Rock,' which provides spectacular views of the town, the coastline, and distant Vietnamese islands. It's a haven for birdwatchers and nature lovers seeking a bit of adventure.",
@@ -62,7 +62,7 @@ export const kepDestinations = [
   {
     id: "crab-market",
     name: "Crab Market",
-    images: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Kep_Crab_Market.jpg/1280px-Kep_Crab_Market.jpg",
+    images: "https://i.ytimg.com/vi/2vbo3iuSn3I/maxresdefault.jpg",
     description: "Savor the freshest seafood, renowned for its incredible flavor.",
     rating: 4.2,
     fullDescription: "The Kep Crab Market (Phsar Kdam) is a sensory explosion. Watch as women wade into the shallow waters to pull up heavy wooden crab pots, then choose your own catch to be cooked right before your eyes with fresh green Kampot pepper. The adjacent restaurants offer some of the best seafood dining in Cambodia, all while overlooking the ocean.",

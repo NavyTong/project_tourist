@@ -52,7 +52,7 @@ export const kohkongDestinations = [
   {
     id: "peam-krasop",
     name: "Peam Krasop Wildlife Sanctuary",
-    images: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Peam_Krasaop_Wildlife_Sanctuary.jpg/1280px-Peam_Krasaop_Wildlife_Sanctuary.jpg",
+    images: "https://upload.wikimedia.org/wikipedia/commons/1/1e/%E1%9E%88%E1%9E%9A%E1%9E%96%E1%9E%B8%E1%9E%9B%E1%9E%BE%E1%9E%94%E1%9F%89%E1%9E%98%E1%9E%98%E1%9E%BE%E1%9E%9B%E1%9E%91%E1%9F%85%E1%9E%96%E1%9F%92%E1%9E%9A%E1%9F%83%E1%9E%80%E1%9F%84%E1%9E%84%E1%9E%80%E1%9E%B6%E1%9E%84_-_panoramio.jpg",
     description: "Walk the elevated wooden boardwalks through vast, lush mangrove forests.",
     rating: 4.6,
     fullDescription: "Peam Krasop contains one of the largest and most intact mangrove forests in Southeast Asia. A 600-meter elevated wooden boardwalk winds through the towering mangrove trees, allowing visitors a close-up look at this vital and fascinating ecosystem. Boat trips are also available to explore the labyrinth of waterways throughout the sanctuary's 23,750 hectares.",
@@ -62,7 +62,7 @@ export const kohkongDestinations = [
   {
     id: "tatai-waterfall",
     name: "Tatai Waterfall",
-    images: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Tatai_Waterfall.jpg/1280px-Tatai_Waterfall.jpg",
+    images: "https://www.asiakingtravel.com/cuploads/files/Tatai-waterfall-2.jpg",
     description: "A wide, rocky cascading waterfall surrounded by thick tropical jungle.",
     rating: 4.6,
     fullDescription: "The Tatai Waterfall is a spectacular natural feature located on the Tatai River. During the wet season, the water thunders over a 10-meter high rock ledge, creating a wide, impressive curtain of water. In the dry season, the flow is gentler, revealing the intricate rock formations and creating several pools that are safe for swimming. The surrounding jungle is incredibly dense and teeming with life.",

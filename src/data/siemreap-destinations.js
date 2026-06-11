@@ -22,7 +22,7 @@ export const siemreapDestinations = [
   {
     id: "ta-prohm",
     name: "Ta Prohm",
-    images: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Cambodia_Ta_Prohm_2.jpg/1280px-Cambodia_Ta_Prohm_2.jpg",
+    images: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjfqhigevmTzN0fx70_q8qDj0c23kV-JPIHA&s",
     description: "The 'Jungle Temple' where giant trees grow amidst the ruins.",
     rating: 4.4,
     fullDescription: "Famously known as the 'Tomb Raider' temple, Ta Prohm has been left largely in the same condition in which it was found. The photogenic combination of giant tree roots plunging into the ancient stone walls and dense jungle surroundings makes it one of the most atmospheric and popular temples in Angkor. It offers a powerful reminder of nature's ability to reclaim human endeavors.",
@@ -32,7 +32,7 @@ export const siemreapDestinations = [
   {
     id: "angkor-thom",
     name: "Angkor Thom",
-    images: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/South_Gate_of_Angkor_Thom.jpg/1280px-South_Gate_of_Angkor_Thom.jpg",
+    images: "https://smarthistory.org/wp-content/uploads/2022/01/tower-detail-south-gate-angkor-thom.jpg",
     description: "The ancient royal city and the last capital of the Khmer Empire.",
     rating: 4.7,
     fullDescription: "Angkor Thom, the 'Great City', was the last and most enduring capital city of the Khmer empire. It was established in the late twelfth century by King Jayavarman VII. It covers an area of 9 square kilometers, within which are located several monuments from earlier eras as well as those built by Jayavarman and his successors. The monumental South Gate, featuring lines of stone figures churning the ocean of milk, is a breathtaking entrance to the city.",
@@ -42,7 +42,7 @@ export const siemreapDestinations = [
   {
     id: "angkor-museum",
     name: "Angkor Museum",
-    images: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Angkor_National_Museum.jpg/1280px-Angkor_National_Museum.jpg",
+    images: "https://image.arrivalguides.com/x/16/41b23950263661b671093a97097eebf0.jpg",
     description: "Explore the golden era of Khmer art and history.",
     rating: 4.8,
     fullDescription: "An exceptional museum serving as a comprehensive introduction to the Angkor Archaeological Park. The Angkor National Museum features stunning exhibits of Khmer art, culture, and history, presented in state-of-the-art galleries. It houses a vast collection of invaluable artifacts from various periods of the Khmer Empire, providing essential context before visiting the temples.",
@@ -52,7 +52,7 @@ export const siemreapDestinations = [
   {
     id: "phare-circus",
     name: "Phare Circus",
-    images: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Phare_Ponleu_Selpak_Circus_Battambang.jpg/1280px-Phare_Ponleu_Selpak_Circus_Battambang.jpg",
+    images: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-Qq9F5Xwg-v7V2WWALrI89UOF20sHycMMSA&s",
     description: "A world-class circus performance blending theater and music.",
     rating: 4.5,
     fullDescription: "More than just a circus, Phare performers use theater, music, dance and modern circus arts to tell unique Cambodian stories; historical, folk and modern. The young circus artists will astonish you with their energy, emotion, enthusiasm and talent. It's a fantastic evening entertainment option that also supports a great social cause, providing arts education to Cambodian youth.",
@@ -62,7 +62,7 @@ export const siemreapDestinations = [
   {
     id: "pub-street",
     name: "Pub Street",
-    images: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Siem_reap_bar_street.jpg/1280px-Siem_reap_bar_street.jpg",
+    images: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGmfNOjztruR58pRQbXRzNj1A-WGmytmveng&s",
     description: "The vibrant heart of Siem Reap's nightlife and dining scene.",
     rating: 4.2,
     fullDescription: "Pub Street is the epicenter of Siem Reap's nightlife. After a long day of temple exploring, this vibrant street comes alive with bright neon lights, bustling crowds, and endless dining and drinking options. From local street food and 50-cent draft beers to upscale international cuisine, Pub Street offers a lively atmosphere that caters to backpackers and luxury travelers alike.",
@@ -72,7 +72,7 @@ export const siemreapDestinations = [
   {
     id: "banteay-srei",
     name: "Banteay Srei",
-    images: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Banteay_Srei_03.jpg/1280px-Banteay_Srei_03.jpg",
+    images: "https://www.civitatis.com/f/images/reviews/activities/19856166/activity_19856166_attach_5.jpeg",
     description: "The 'Pink Temple', known for its incredibly intricate carvings.",
     rating: 4.2,
     fullDescription: "Often referred to as the 'Jewel of Khmer Art', Banteay Srei is a 10th-century Cambodian temple dedicated to the Hindu god Shiva. Built largely of red sandstone, it is celebrated for its elaborate, deeply carved decorative wall reliefs. Due to its miniature scale and extraordinary detail, it is widely considered one of the finest temples in the Angkor region.",

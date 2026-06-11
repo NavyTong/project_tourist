@@ -72,7 +72,7 @@ export const kampotDestinations = [
   {
     id: "kampot-salt-fields",
     name: "Kampot Salt Fields",
-    images: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Salt_fields_in_Kampot.jpg/1280px-Salt_fields_in_Kampot.jpg",
+    images: "https://www.khmertimeskh.com/wp-content/uploads/2024/03/tour-salt-fields.jpg",
     description: "See the fascinating mirror-like salt pans during the dry season.",
     rating: 4.7,
     fullDescription: "Kampot is famous for its high-quality sea salt, and the vast salt fields are a sight to behold, especially during the harvest season (January to May). The shallow pans of water create a mirror-like effect, reflecting the sky and the salt farmers at work. It's an educational experience that provides a glimpse into one of the region's vital and historic industries.",

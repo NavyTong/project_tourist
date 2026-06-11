@@ -76,6 +76,7 @@ const Placemanagement = () => {
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="bg-gray-50/50 border-b border-gray-100">
+                  <th className="px-6 py-4 text-xs font-semibold text-gray-500 uppercase tracking-wider w-16">No.</th>
                   <th className="px-6 py-4 text-xs font-semibold text-gray-500 uppercase tracking-wider w-24">Image</th>
                   <th className="px-6 py-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Place Name</th>
                   <th className="px-6 py-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">Province</th>
@@ -85,8 +86,11 @@ const Placemanagement = () => {
               </thead>
               <tbody className="divide-y divide-gray-50">
                 {filteredPlaces.length > 0 ? (
-                  filteredPlaces.map((place) => (
+                  filteredPlaces.map((place, index) => (
                     <tr key={place.id} className="hover:bg-blue-50/30 transition-colors group">
+                      <td className="px-6 py-3 text-sm text-gray-400 font-medium font-mono">
+                        {(index + 1).toString().padStart(2, '0')}
+                      </td>
                       <td className="px-6 py-3">
                         <div className="relative h-10 w-14 rounded-lg overflow-hidden ring-1 ring-gray-100 group-hover:ring-blue-200 transition-all">
                           <img
@@ -127,7 +131,7 @@ const Placemanagement = () => {
                   ))
                 ) : (
                   <tr>
-                    <td colSpan="5" className="px-6 py-12 text-center text-gray-400 text-sm">
+                    <td colSpan="6" className="px-6 py-12 text-center text-gray-400 text-sm">
                       No places found matching your search or filters.
                     </td>
                   </tr>

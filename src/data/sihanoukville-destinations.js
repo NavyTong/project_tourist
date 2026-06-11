@@ -62,7 +62,7 @@ export const sihanoukvilleDestinations = [
   {
     id: "otres-beach",
     name: "Otres Beach",
-    images: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Sihanoukville_beaches.jpg/1280px-Sihanoukville_beaches.jpg",
+    images: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt1MAR2nbXFfa5IU3gwhzjCztt53pSDnGQtA&s",
     description: "A laid-back, bohemian beach famous for spectacular sunsets.",
     rating: 4.9,
     fullDescription: "Otres Beach has long been the bohemian heart of Sihanoukville. Divided into Otres 1 and Otres 2, it is famous for its long, straight coastline and some of the most spectacular sunsets in Southeast Asia. While the area has seen rapid development, it still retains a more relaxed and artistic vibe compared to the city center, with charming boutique hotels and sunset bars.",
@@ -72,7 +72,7 @@ export const sihanoukvilleDestinations = [
   {
     id: "wat-leu",
     name: "Wat Leu",
-    images: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Koh_Rong_Sanloem.jpg/1280px-Koh_Rong_Sanloem.jpg", // Using a better landscape image from the same area
+    images: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw59Yso_EZa5b4PQ1zdcmxltMxgx1wBbRpQQ&s", // Using a better landscape image from the same area
     description: "A hilltop temple offering panoramic views over the city and islands.",
     rating: 4.8,
     fullDescription: "Wat Leu is a beautiful and historic Buddhist temple situated on the highest point in Sihanoukville. Surrounded by lush forest and peaceful gardens, the temple architecture features intricate gold leaf and beautiful traditional carvings. The primary draw for many visitors, besides the spiritual atmosphere, is the breathtaking panoramic view of the Gulf of Thailand and the distant islands.",

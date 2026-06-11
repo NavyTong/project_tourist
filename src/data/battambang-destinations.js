@@ -12,7 +12,7 @@ export const battambangDestinations = [
   {
     id: "phare-circus-battambang",
     name: "Phare Ponleu Selpak",
-    images: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Phare_Ponleu_Selpak_Circus_Battambang.jpg/1280px-Phare_Ponleu_Selpak_Circus_Battambang.jpg",
+    images: "https://phareps.org/wp-content/uploads/2022/10/IMG_2845-1-scaled.jpg",
     description: "A famous non-profit circus and arts school with captivating shows.",
     rating: 4.4,
     fullDescription: "Phare Ponleu Selpak (The Brightness of the Arts) is a world-class non-profit arts school that provides vocational training to vulnerable youth. Their evening circus performances are a must-see, blending modern circus arts, theater, and traditional Cambodian stories. The energy, talent, and social mission behind the school make it one of the most rewarding experiences in Cambodia.",
@@ -52,7 +52,7 @@ export const battambangDestinations = [
   {
     id: "bamboo-train",
     name: "Bamboo Train",
-    images: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Bamboo_train_battambang.jpg/1280px-Bamboo_train_battambang.jpg",
+    images: "https://merrytravelasia.com/wp-content/uploads/2023/06/Bamboo-train-riding-Battambang-Multi-Adventure-Tours.jpg",
     description: "Experience the thrilling ride on the famous norry bamboo flatbeds.",
     rating: 4.4,
     fullDescription: "The Bamboo Train (or Norry) is one of the most unique and thrilling transportation experiences in the world. Originally a clever way for locals to move goods on abandoned colonial rail lines, it features a bamboo platform powered by a small engine. The ride through the lush countryside is breezy and exhilarating, offering a glimpse into ingenious Cambodian rural life.",
@@ -62,7 +62,7 @@ export const battambangDestinations = [
   {
     id: "banan-temple",
     name: "Banan Temple",
-    images: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Wat_Banan.jpg/1280px-Wat_Banan.jpg",
+    images: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVhXjSvB8rzlAy3Fj9VzC-Qtfc0MSoshUeaTXRiRo49G65gkbhYQ3-yhzuQm042Xkc0NkWPUYPLAqsmVFA5zuJ2AhD3qJlUPsOaxROXlpCtGq4WnpPTw5MspRtHF20hbNxCZqkb5nDexLHv8R4EtmLEX6yOxHhCtZ6JLPy50ogvi6r2IQEbt5bo1bi/s1600/Phnom%20Banan.jpg",
     description: "Climb the steps to this hilltop temple often compared to a mini Angkor Wat.",
     rating: 4.6,
     fullDescription: "Built in the 11th century, Wat Banan is a well-preserved hilltop temple that features five towers reminiscent of Angkor Wat. To reach the summit, you'll climb over 300 steps, which are rewarded with panoramic views of the Sangkae River and the surrounding rice paddies. The carvings on the temple doors and lintels are remarkably intricate and provide a quiet alternative to the more crowded temples of Angkor.",
@@ -72,7 +72,7 @@ export const battambangDestinations = [
   {
     id: "provincial-museum",
     name: "Provincial Museum",
-    images: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Battambang_Provincial_Hall.jpg/1280px-Battambang_Provincial_Hall.jpg",
+    images: "https://image.kkday.com/v2/image/get/h_650%2Cc_fit/s1.kkday.com/product_scm_8197/20251129050441_EkRic/png",
     description: "Discover local artifacts and the rich history of the Battambang region.",
     rating: 4.4,
     fullDescription: "The Battambang Provincial Museum houses an excellent collection of pre-Angkorian and Angkorian artifacts recovered from nearby archaeological sites. The exhibits include beautifully carved lintels, statues, and ceramics that showcase the artistic and cultural evolution of the region. The museum itself is housed in a fine example of French colonial architecture.",

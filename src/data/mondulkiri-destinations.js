@@ -52,7 +52,7 @@ export const mondulkiriDestinations = [
   {
     id: "sea-of-forest",
     name: "Sea of Forest Viewpoint",
-    images: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Sen_Monorom_view.jpg/1280px-Sen_Monorom_view.jpg",
+    images: "https://visitlocaltravel.com/blog/wp-content/uploads/2024/08/Sea-Forest-Resport.png",
     description: "Enjoy breathtaking panoramic views of the endless rolling green hills.",
     rating: 4.3,
     fullDescription: "The Sea of Forest Viewpoint (Samot Chue) offers one of the most spectacular panoramas in all of Cambodia. From the ridge, the rolling hills and dense evergreen forests stretch as far as the eye can see, appearing like the waves of a vast green ocean. It is an incredibly peaceful spot, especially at sunrise when the mist hangs low in the valleys.",
@@ -62,7 +62,7 @@ export const mondulkiriDestinations = [
   {
     id: "phnom-doh-kromom",
     name: "Phnom Doh Kromom",
-    images: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Mondulkiri_landscape.jpg/1280px-Mondulkiri_landscape.jpg",
+    images: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNCMBZEJOT9PpMxDRLaSbxGqAEU7CMhI5yQ6ig9x_A9cpuvgyOOz8H0Pls4MrMudNCfhAPbs3hjeCuDDU8u9y5Wo5sv3YZbVHyOcv00QqxBMyVlBqjM91eek1Y0j5nPgEwkAeZbjfmop2_6V3XdCuc_PhoMuokXyIEOcJs_kg4TYnt35LLz6T9upvG/s1280/Doh%20Kramom%20Mountain.jpeg",
     description: "A sacred hilltop pagoda offering the best sunset views in the province.",
     rating: 4.4,
     fullDescription: "Phnom Doh Kromom is a sacred hilltop located just on the edge of Sen Monorom. It is home to an important Buddhist pagoda and serves as a significant spiritual site for the local community. The hill offers the most popular vantage point for sunset, providing views over the town and the vast 'Sea of Forest' beyond as the sky turns into vibrant gold and orange shades.",

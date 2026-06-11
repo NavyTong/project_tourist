@@ -62,7 +62,7 @@ export const ratanakiriDestinations = [
   {
     id: "andoung-meas",
     name: "Andoung Meas",
-    images: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Yeak_Laom_Lake_-_Banlung_-_Cambodia.jpg/1280px-Yeak_Laom_Lake_-_Banlung_-_Cambodia.jpg",
+    images: "https://cambotours.com/userfiles/full-day-tour-around-banlung-ratanakiri-2(1).jpg",
     description: "Known as the 'Golden Well', offering deep insights into indigenous culture.",
     rating: 4.8,
     fullDescription: "Andoung Meas (The Golden Well) is a remote district located along the Sesan River. It is a culturally rich area where several indigenous groups live and practice their traditional ways of life. Visiting this area, mostly by boat, provides profound insights into their unique architecture, spirit forests, and long-standing ancestral traditions.",
