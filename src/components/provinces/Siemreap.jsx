@@ -1,10 +1,58 @@
 import Link from 'next/link';
 import { siemreapDestinations } from '@/data/siemreap-destinations';
+import { useState, useEffect } from 'react';
 
 export default function Siemreap() {
   const destinations = siemreapDestinations;
+  const [user, setUser] = useState(null);
 
+  useEffect(() => {
+    const savedUser = localStorage.getItem("currentUser");
+    if (savedUser) {
+      setUser(JSON.parse(savedUser));
+    }
+  }, []);
 
+  const toggleFavorite = (e, itemId) => {
+    e.preventDefault();
+    if (!user) {
+      alert("Please sign in to save favorites.");
+      return;
+    }
+    
+    let updatedFavorites = [...(user.favorites || [])];
+    if (updatedFavorites.includes(itemId)) {
+      updatedFavorites = updatedFavorites.filter(id => id !== itemId);
+    } else {
+      updatedFavorites.push(itemId);
+    }
+    
+    const updatedUser = { ...user, favorites: updatedFavorites };
+    setUser(updatedUser);
+    localStorage.setItem("currentUser", JSON.stringify(updatedUser));
+  };
+
+  const handleRating = (e, itemId, rating) => {
+    e.preventDefault();
+    if (!user) {
+      alert("Please sign in to rate destinations.");
+      return;
+    }
+    
+    const currentRating = user.ratings?.[itemId];
+    const updatedRatings = { ...(user.ratings || {}) };
+
+    if (currentRating === rating) {
+      // Clicking the same star removes the rating
+      delete updatedRatings[itemId];
+    } else {
+      updatedRatings[itemId] = rating;
+    }
+
+    const updatedUser = { ...user, ratings: updatedRatings };
+    setUser(updatedUser);
+    localStorage.setItem("currentUser", JSON.stringify(updatedUser));
+  };
 
   return (
     <section className="px-8 py-24 bg-white min-h-screen">
@@ -66,50 +114,65 @@ export default function Siemreap() {
              <p className="text-gray-500 text-lg">Must-visit sites in and around the Angkor Archaeological Park</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {destinations.map((item) => (
-              <Link href={`/details/${item.id}`} key={item.id} passHref>
-                <div
-                  className="bg-white rounded-[2rem] overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 group cursor-pointer border border-gray-100 flex flex-col h-full"
-                >
-                  <div className="h-64 overflow-hidden relative">
-                    <img
-                      src={item.images}
-                      alt={item.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-                    />
-                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-red-500" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="p-7 flex flex-col flex-1">
-                    <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-500 transition-colors">
-                      {item.name}
-                    </h4>
-                    <div className="flex items-center mb-4">
-                      <div className="flex text-yellow-400">
-                        {[...Array(5)].map((_, i) => (
-                          <svg key={i} xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4 ${i < Math.floor(item.rating || 5) ? 'text-yellow-400' : 'text-gray-300'}`} viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                          </svg>
-                        ))}
+            {destinations.map((item) => {
+              const isFavorite = user?.favorites?.includes(item.id);
+              const userRating = user?.ratings?.[item.id] || 0;
+              const displayRating = userRating || Math.floor(item.rating || 5);
+              
+              return (
+                <Link href={`/details/${item.id}`} key={item.id} passHref>
+                  <div
+                    className="bg-white rounded-[2rem] overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 group cursor-pointer border border-gray-100 flex flex-col h-full"
+                  >
+                    <div className="h-64 overflow-hidden relative">
+                      <img
+                        src={item.images}
+                        alt={item.name}
+                        className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                      />
+                      <div 
+                        onClick={(e) => toggleFavorite(e, item.id)}
+                        className={`absolute top-4 right-4 bg-white/90 backdrop-blur-md p-2 rounded-full transition-opacity cursor-pointer shadow-sm hover:scale-110 ${isFavorite ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-red-500" viewBox="0 0 20 20" fill={isFavorite ? "currentColor" : "none"} stroke="currentColor">
+                          <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
+                        </svg>
                       </div>
-                      <span className="text-gray-500 text-sm font-medium ml-2">{Number(item.rating || 5).toFixed(1)} / 5</span>
                     </div>
-                    <p className="text-gray-500 text-sm leading-relaxed mb-6 flex-1">
-                      {item.description}
-                    </p>
-                    <div className="flex items-center text-blue-500 font-bold group-hover:translate-x-2 transition-transform select-none">
-                      <span>Explore</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                      </svg>
+                    <div className="p-7 flex flex-col flex-1">
+                      <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-500 transition-colors">
+                        {item.name}
+                      </h4>
+                      <div className="flex items-center mb-4">
+                        <div className="flex text-yellow-400" onClick={(e) => e.preventDefault()}>
+                          {[...Array(5)].map((_, i) => (
+                            <svg 
+                              key={i} 
+                              onClick={(e) => handleRating(e, item.id, i + 1)}
+                              xmlns="http://www.w3.org/2000/svg" 
+                              className={`h-4 w-4 cursor-pointer hover:scale-125 transition-transform ${i < displayRating ? 'text-yellow-400 fill-current' : 'text-gray-300 fill-current'}`} 
+                              viewBox="0 0 20 20"
+                            >
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                          ))}
+                        </div>
+                        <span className="text-gray-500 text-sm font-medium ml-2">{Number(displayRating).toFixed(1)} / 5</span>
+                      </div>
+                      <p className="text-gray-500 text-sm leading-relaxed mb-6 flex-1">
+                        {item.description}
+                      </p>
+                      <div className="flex items-center text-blue-500 font-bold group-hover:translate-x-2 transition-transform select-none">
+                        <span>Explore</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                        </svg>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              );
+            })}
           </div>
         </div>
 
