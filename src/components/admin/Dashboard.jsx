@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { provinces } from "@/data/provinces";
 import { allDestinations } from "@/data/all-destinations";
 import { allActivities } from "@/data/activities";
 
 const Dashboard = () => {
+  const [provinceCount, setProvinceCount] = useState(0);
+
+  useEffect(() => {
+    const fetchProvinces = async () => {
+      try {
+        const res = await fetch("/api/provinces");
+        const data = await res.json();
+        setProvinceCount(data.length);
+      } catch (error) {
+        console.error("Failed to fetch provinces:", error);
+      }
+    };
+    fetchProvinces();
+  }, []);
+
   const stats = [
-    { title: "Total Provinces", value: provinces.length.toString(), change: "+2 this month", icon: <ProvinceIcon />, color: "from-blue-500 to-blue-600" },
+    { title: "Total Provinces", value: provinceCount.toString(), change: "+2 this month", icon: <ProvinceIcon />, color: "from-blue-500 to-blue-600" },
     { title: "Total Destinations", value: allDestinations.length.toString(), change: "+12 this week", icon: <PlaceIcon />, color: "from-violet-500 to-violet-600" },
     { title: "Active Activities", value: allActivities.length.toString(), change: "+5 new", icon: <ActivityIcon />, color: "from-emerald-500 to-emerald-600" },
     { title: "Pending Reviews", value: "18", change: "Requires action", icon: <ReviewIcon />, color: "from-amber-500 to-amber-600" },
